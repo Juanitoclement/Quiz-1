@@ -12,8 +12,28 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-        echo "Connected successfully";
+    else{
+      $query = "SELECT * FROM carsharing WHERE Username ='$usernameloc' AND Password = '$passwordloc' ";
 
-    $query = "SELECT * FROM carsharing WHERE Username = '$usernameloc' AND Password = '$passwordloc' ";
-    header("Location: Availableoffers.php");
+      $result = mysqli_query($conn, $query);
+      if(mysqli_num_rows($result)>0)
+      {
+        echo "Connected successfully";
+        $row = mysqli_fetch_assoc($result);
+        $type = $row["Type"];
+        if($type == "passanger")
+        {
+          header("Location: HomePass.php");
+        }
+        else if($type == "driver")
+        {
+          header("Location: HomeDri.php");
+        }
+      }
+      if(mysqli_num_rows($result)==0)
+      {
+        echo "No Data";
+        header("Location: index.php");
+      }
+    }
  ?>

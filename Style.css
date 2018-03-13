@@ -10,17 +10,30 @@ body
 .header
 {
   text-align: center;
-  
+
 }
 
-.login
+.test123
 {
   display: block;
   text-align: center;
   font-family:monospace;
   font-size: 30px;
 }
-
+.test321
+{
+  display: inline;
+  margin : 100px;
+  text-align: center;
+  font-family:fantasy;
+  font-size: 50px;
+  padding-left: 50px;
+}
+.banner
+{
+  background-color: black;
+  padding-left: 20px;
+}
 table, th, td
 {
     border-collapse: collapse;

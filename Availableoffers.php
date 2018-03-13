@@ -9,7 +9,7 @@
     </div>
     <br>
     <br>
-    <p class="login">Available Offers</p>
+    <p class="test123">Available Offers</p>
     <table class="table" align="center">
     <thead>
       <tr>
